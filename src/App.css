@@ -315,7 +315,7 @@ body {
 
 .arrow-down {
   position: absolute;
-  bottom: 5rem;
+  bottom: 10rem;
   left: 50%;
   font-size: 3rem;
   filter: drop-shadow(var(--logo-shadow));
