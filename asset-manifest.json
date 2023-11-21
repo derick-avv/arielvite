@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/arielvite/static/css/main.278c64e3.css",
+    "main.js": "/arielvite/static/js/main.3d76feae.js",
+    "index.html": "/arielvite/index.html",
+    "main.278c64e3.css.map": "/arielvite/static/css/main.278c64e3.css.map",
+    "main.3d76feae.js.map": "/arielvite/static/js/main.3d76feae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.278c64e3.css",
+    "static/js/main.3d76feae.js"
+  ]
+}
