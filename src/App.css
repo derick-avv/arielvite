@@ -1,38 +1,479 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/**==================== STYLE RESET ====================**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-void);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+/**====================/// STYLE RESET \\\====================**/
+
+/**==================== BASE/VARIABLES ====================**/
+body {
+  font-family: "Poppins", sans-serif;
+  
+}
+
+:root {
+  font-size: 14px;
+  --color-primary: #f88973;
+  --color-secondary: #0d0d1b;
+  --color-text-shadow: #0d0d1b6b;
+  --hero-shadow: 0rem 0rem 10rem var(--color-secondary);
+  --link-shadow: .1rem .1rem .5rem var(--color-secondary);
+  --logo-shadow: .1rem .1rem 1rem var(--color-secondary);
+  --link-shadow-active: 0rem 0rem 8px var(--color-primary);
+}
+
+.wrapper {
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+  position: relative;
+  background: radial-gradient(circle at center, var(--color-primary), var(--color-secondary));
+}
+
+/**====================/// BASE/VARIABLES \\\====================**/
+
+/**==================== KEYFRAMES ====================**/
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) translateY(-50%) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(-50%) scale(1);
+  }
+}
+
+/**====================/// KEYFRAMES \\\====================**/
+
+/**==================== THEMES ====================**/
+.red-theme {
+  --color-primary: #f88973;
+  --link-shadow-active: 0rem 0rem 8px var(--color-primary);
+}
+
+.blue-theme {
+  --color-primary: #73cef8;
+  --link-shadow-active: 0rem 0rem 8px var(--color-primary);
+}
+
+.gold-theme {
+  --color-primary: #f5cb86;
+  --link-shadow-active: 0rem 0rem 8px var(--color-primary);
+}
+
+.white-theme {
+  --color-primary: #fff;
+  --link-shadow-active: 0rem 0rem 8px var(--color-primary);
+}
+
+/**====================/// THEMES \\\====================**/
+
+/**==================== HEADER ====================**/
+.header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  z-index: 1000;
+}
+
+.logo p {
+  font-size: 8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-shadow: var(--logo-shadow);
+  transition: all .4s ease;
+}
+
+.logo p span {
+  margin: -1.75rem;
+}
+
+.logo p:hover {
+  transform: scale(.90);
+}
+
+.navigation {
+  padding: 0rem 1rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 5rem;
+}
+
+.tab-button {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  text-shadow: var(--link-shadow);
+  transition: all .4s ease;
+}
+
+.tab-button:hover {
+  transform: scale(1.15);
+}
+
+.tab-button.active {
+  color: var(--color-secondary);
+  text-shadow: var(--link-shadow-active);
+}
+
+.hambrg {
+  font-size: 3rem;
+  color: var(--color-primary);
+  display: none;
+}
+
+/**====================/// HEADER \\\====================**/
+
+/**==================== LEFT SECTION ====================**/
+.left {
+  position: fixed;
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  z-index: 600;
+}
+
+.social {
+  position: absolute;
+  bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.social-btn {
+  font-size: 1.75rem;
+  text-shadow: var(--link-shadow);
+  color: var(--color-primary);
+  transition: all .4s ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.25);
+}
+
+/**====================/// LEFT SECTION \\\====================**/
+
+/**==================== RIGHT SECTION ====================**/
+.right {
+  position: fixed;
+  right: 6rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  z-index: 600;
+}
+
+.themes {
+  position: absolute;
+  bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.theme-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  box-shadow: var(--link-shadow);
+  transition: all .4s ease;
+}
+
+.theme1 {
+  background: linear-gradient(45deg, #f88973, #0d0d1b);
+}
+
+.theme2 {
+  background: linear-gradient(45deg, #73cef8, #0d0d1b);
+}
+
+.theme3 {
+  background: linear-gradient(45deg, #f5cb86, #0d0d1b);
+}
+
+.theme4 {
+  background: linear-gradient(45deg, #ffffff, #0d0d1b);
+}
+
+.theme-btn:hover {
+  transform: scale(1.25);
+}
+
+.theme-btn.active {
+  border: 2px solid var(--color-primary);
+}
+
+/**====================/// RIGHT SECTION \\\====================**/
+
+/**==================== CONTENT SECTION ====================**/
+.content {
+  flex-direction: column;
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  display: flex;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/**====================/// CONTENT SECTION \\\====================**/
+
+/**==================== HOME PAGE ====================**/
+.hero {
+  background: linear-gradient(210deg, var(--color-primary), var(--color-secondary), var(--color-primary));
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-transform: uppercase;
+  filter: drop-shadow(var(--hero-shadow));
+  transition: all .4s ease;
+  animation: fade-down .75s forwards;
+}
+
+.hero:hover {
+  filter: none;
+  transform: scale(.98);
+}
+
+.hero h1 {
+  font-size: 20rem;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  font-size: 3rem;
+  filter: drop-shadow(var(--logo-shadow));
+  transform: translateX(-50%);
+  color: var(--color-primary);
+  transition: all .4s ease;
+}
+
+/**====================/// HOME PAGE \\\====================**/
+
+/**==================== PROJECTS SECTION ====================**/
+.postList {
+  display: flex;
+  gap: 2rem;
+  overflow: auto;
+  height: 42rem;
+  width: 90vw;
+  padding: 2rem 2rem 0;
+  border-bottom: 2px solid var(--color-primary);
+  border-left: 2px solid var(--color-primary);
+  margin: 0 2rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.postList::-webkit-scrollbar {
+  display: none;
+}
+
+.post {
+  display: inline-block;
+  width: 40rem;
+  height: 40rem;
+}
+
+.postTitle {
+  padding: 1rem;
+  font-size: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.postContent {
+  height: 30rem;
+  width: 40rem;
+  overflow: hidden;
+  border-radius: .30rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.postContent img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.postBody {
+  padding: .5rem;
+  text-align: center;
+}
+
+/**====================/// PROJECTS SECTION \\\====================**/
+
+/**==================== ARTISTRY SECTION ====================**/
+
+/**====================/// ARTISTRY SECTION \\\====================**/
+
+/**==================== SERVICES SECTION ====================**/
+
+/**====================/// SERVICES SECTION \\\====================**/
+
+/**==================== ABOUTME SECTION ====================**/
+
+/**====================/// ABOUTME SECTION \\\====================**/
+
+/**==================== CONTACT SECTION ====================**/
+
+/**====================/// CONTACT SECTION \\\====================**/
+
+@media screen and (max-width: 1400px) {
+  :root {
+    font-size: 9px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1200px) {
+  .hambrg {
+    display: flex;
+    z-index: 4000;
+    color: var(--color-primary);
   }
-  to {
-    transform: rotate(360deg);
+
+  .navigation {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    right: -100%;
+    /* background: radial-gradient( var(--color-primary), var(--color-secondary)); */
+    background: #000000d3;
+    width: 100%;
+    z-index: 3500;
+    display: none;
+    animation: showMenu 0.6s ease forwards;
+  }
+
+  @keyframes showMenu {
+    to {
+      right: 0
+    }
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+
+  .tab-button {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .hero {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 10rem;
+    line-height: 10rem;
+  }
+
+  .theme-btn {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .social-btn {
+    font-size: 2.625rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .hero {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 10rem;
+    line-height: 10rem;
+  }
+
+  .theme-btn {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .social-btn {
+    font-size: 2.625rem;
   }
 }
