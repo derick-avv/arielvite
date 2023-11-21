@@ -5,11 +5,13 @@ function Header() {
   const handleClick = () => {
     const navbar = document.querySelector('.navigation');
     navbar.classList.toggle('open');
+    document.body.classList.toggle('stopScroll');
   };
 
   const handleNavClick = () => {
     const navbar = document.querySelector('.navigation');
     navbar.classList.remove('open');
+    document.body.classList.remove('stopScroll');
   };
 
   return (

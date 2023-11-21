@@ -178,6 +178,11 @@ body {
   display: none;
 }
 
+.stopScroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 /**====================/// HEADER \\\====================**/
 
 /**==================== LEFT SECTION ====================**/
@@ -413,6 +418,7 @@ body {
 
   .navigation.open {
     display: flex;
+    
   }
 
   .nav-list {
