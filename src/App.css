@@ -329,15 +329,7 @@ body {
   height: 42rem;
   width: 90vw;
   padding: 2rem 2rem 0;
-  border-bottom: 2px solid var(--color-primary);
-  border-left: 2px solid var(--color-primary);
   margin: 0 2rem;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.postList::-webkit-scrollbar {
-  display: none;
 }
 
 .post {
@@ -445,6 +437,10 @@ body {
   .hero h1 {
     font-size: 10rem;
     line-height: 10rem;
+  }
+
+  .themes {
+    gap: 2.5rem;
   }
 
   .theme-btn {
