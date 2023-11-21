@@ -183,7 +183,7 @@ body {
 /**==================== LEFT SECTION ====================**/
 .left {
   position: fixed;
-  padding-left: 5rem;
+  left: 5rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
