@@ -22,6 +22,10 @@ function Home() {
         </div>
         <div className="section">
           <h1 className="pageTitle">Expertise</h1>
+          <p className="pageDescription">
+            I have dedicated a full year in mastering these skills and continue
+            to do so on the daily.
+          </p>
           <div className="cards">
             <div className="flipCard">
               <div className="flipCardInner">
