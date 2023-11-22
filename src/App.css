@@ -324,15 +324,155 @@ body {
   transition: all .4s ease;
 }
 
+.pageTitle {
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px #0000005a;
+  margin-top: -2rem;
+
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  gap: 2rem;
+}
+
+.flipCard {
+  background: transparent;
+  width: 21.429rem;
+  height: 21.429rem;
+  perspective: 71.429rem;
+  filter: drop-shadow(0 0 10px #0000006b) ;
+  
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 25%;
+  box-shadow: 0 0 30px #0000005a;
+}
+
+.flipCardFront {
+  background: transparent;
+}
+
+.flipCardFront .cardImage {
+  width: 15.714em;
+  height: auto;
+}
+
+.flipCardBack {
+  background: transparent;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.flipCardBack .cardImage {
+  width: 10em;
+  height: auto;
+}
+
+.flipCardBack h1 {
+  font-size: 1.5em;
+  color: #fff;
+  padding: 0 1em;
+}
+
+.react{
+  fill: #61DBFB;
+}
+
+.js {
+  fill: #ffff00;
+}
+
+.html {
+  fill: #f06529;
+}
+
+.css {
+  fill: #2965f1;
+}
+
+.php {
+  fill: #777BB3;
+}
+
+.node {
+  fill: #03b100;
+}
+
+.flipCardFront .js{
+  width: 12.857em;
+}
+
+.flipCardFront .css {
+  width: 11.786em;
+  margin-top: 1em;
+}
+
+.flipCardFront .html {
+  width: 11.429em;
+  margin-top: 1em;
+}
+
+.flipCardFront .php {
+  width: 17.143em;
+}
+
+.flipCardFront .node {
+  width: 12.857em;
+}
+
+.flipCardBack .php {
+  width: 10em;
+  margin: -1em 0;
+}
+
+.flipCardBack .node {
+  width: 8.571em;
+  margin-bottom: 1em;
+}
+
+.flipCardBack .mysql {
+  margin: -1em 0;
+}
+
+.flipCardBack .html, .flipCardBack .css {
+  width: 8.571em;
+}
+
+
 /**====================/// HOME PAGE \\\====================**/
 
 /**==================== PROJECTS SECTION ====================**/
 .postList {
   display: flex;
   gap: 2rem;
-  overflow: auto;
-  height: 42rem;
-  width: 90vw;
   padding: 2rem 2rem 0;
   margin: 0 2rem;
 }
@@ -388,9 +528,15 @@ body {
   :root {
     font-size: 9px;
   }
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr  ;
+  }
   .hambrg {
     display: flex;
     z-index: 4000;
@@ -435,6 +581,10 @@ body {
 }
 
 @media screen and (max-width: 980px) {
+  .flipCardFront, .flipCardBack {
+    border-radius: 15%;
+  }
+
   .hero {
     width: 100%;
     text-align: center;
@@ -465,6 +615,27 @@ body {
 }
 
 @media screen and (max-width: 690px) {
+  .pageTitle{
+    margin-top: -4rem;
+    margin-bottom: 1rem;
+  }
+  .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+      }
+  .flipCard {
+      width: 12rem;
+      height: 12rem;
+    }
+  
+    .flipCardFront,
+    .flipCardBack {
+      padding: .75rem;
+    }
+  
+    .flipCardBack h1 {
+      display: none;
+    }
   .hero {
     width: 100%;
     text-align: center;
