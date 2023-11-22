@@ -9,18 +9,35 @@ import { ReactComponent as NodejsSvg } from '../img/nodejs.svg';
 import { ReactComponent as MongodbSvg } from '../img/mongodb.svg';
 
 function Home() {
+  let count = 1;
+
+  const handleArrowClick = () => {
+    if (count == 5) count = 0;
+    count += 1;
+    console.log(count);
+    const nextSection = document.querySelector(`[data-num='${count}']`);
+    nextSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'nearest',
+    });
+  };
+
   return (
     <div className="content">
       <div className="row">
         <div className="arrow-down">
-          <i className="fa-solid fa-chevron-down"></i>
+          <i
+            className="fa-solid fa-chevron-down"
+            onClick={handleArrowClick}
+          ></i>
         </div>
-        <div className="section">
+        <div className="section" data-num="1">
           <div className="hero">
             <h1>ARIEL VITE</h1>
           </div>
         </div>
-        <div className="section">
+        <div className="section" data-num="2">
           <h1 className="pageTitle">Expertise</h1>
           <p className="pageDescription">
             I have dedicated a full year in mastering these skills and continue
@@ -125,9 +142,15 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="section"></div>
-        <div className="section"></div>
-        <div className="section"></div>
+        <div className="section" data-num="3">
+          about
+        </div>
+        <div className="section" data-num="4">
+          projects
+        </div>
+        <div className="section" data-num="5">
+          subscribe & footer
+        </div>
       </div>
     </div>
   );
