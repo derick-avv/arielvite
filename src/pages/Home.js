@@ -12,9 +12,8 @@ function Home() {
   let count = 1;
 
   const handleArrowClick = () => {
-    if (count == 5) count = 0;
+    if (count === 5) count = 0;
     count += 1;
-    console.log(count);
     const nextSection = document.querySelector(`[data-num='${count}']`);
     nextSection.scrollIntoView({
       behavior: 'smooth',

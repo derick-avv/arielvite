@@ -338,12 +338,13 @@ body {
 }
 
 .pageDescription {
-  color: #fff;
+  color: #ffffff9a;
   font-size: 2rem;
   margin-bottom: 3rem;
   width: 50rem;
   font-weight: 500;
   text-align: center;
+  text-shadow: 0 0 1px var(--color-primary);
 }
 
 .cards {
