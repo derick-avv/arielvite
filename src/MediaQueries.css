@@ -48,6 +48,7 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
+    gap: 3rem;
   }
 
   .tab-button {
@@ -91,7 +92,7 @@
 
   .themes {
     gap: 3rem;
-    bottom: 10.75rem;
+    bottom: 11rem;
   }
 
   .theme-btn {
@@ -100,7 +101,7 @@
   }
 
   .social {
-    bottom: 10rem;
+    bottom: 11rem;
   }
 
   .social-btn {
@@ -109,6 +110,9 @@
 }
 
 @media screen and (max-width: 690px) {
+  :root {
+    font-size: 9px;
+  }
   .pageTitle {
     margin-top: -7rem;
     margin-bottom: 1rem;
@@ -153,6 +157,7 @@
     grid-template-columns: 1fr 1fr;
     transform: translateX(-50%);
     gap: 1rem;
+    bottom: 12rem;
   }
 
   .theme-btn {
@@ -165,17 +170,25 @@
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     transform: translateX(-35%);
-    bottom: 11rem;
+    bottom: 12rem;
   }
 
   .social-btn {
     font-size: 2.625rem;
     margin: -.5rem 0;
   }
+
+  .arrow-down {
+    bottom: 11rem;
+  }
 }
 
 @media screen and (max-width: 375px) {
   :root {
     font-size: 6px;
+  }
+  .hero {
+    text-wrap: wrap;
+    padding: 2rem;
   }
 }
