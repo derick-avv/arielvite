@@ -1,4 +1,4 @@
-@media screen and (max-width: 1440px) {
+@media (max-width: 1440px) {
   :root {
     font-size: 9px;
   }
@@ -8,7 +8,7 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media (max-width: 1280px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -57,14 +57,14 @@
   }
 }
 
-@media screen and (max-width: 1114px) {
+@media (max-width: 1114px) {
   :root{
     font-size: 8px;
   }
 }
 
 
-@media screen and (max-width: 980px) {
+@media (max-width: 980px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -106,7 +106,7 @@
   }
 }
 
-@media screen and (max-width: 690px) {
+@media (max-width: 690px) {
   :root {
     font-size: 10px;
   }
