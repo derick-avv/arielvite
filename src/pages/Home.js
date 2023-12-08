@@ -33,7 +33,6 @@ function Home() {
           </div>
         </div>
         <div className="section" data-num="2">
-          <h1 className="pageTitle">Expertise</h1>
           <div className="cards">
             <div className="flipCard">
               <div className="flipCardInner">

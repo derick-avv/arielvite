@@ -119,8 +119,6 @@
     width: 36rem;
     font-size: 1.5rem;
   }
-
-
   .flipCardFront,
   .flipCardBack {
     padding: .75rem;
@@ -183,8 +181,8 @@
     text-align: center;
   }
   .flipCard {
-    width: 35rem;
-    height: 45rem;
+    width: 40rem;
+    height: 50rem;
   }
   .flipCardBack .cardImage {
     font-size: 10rem;
