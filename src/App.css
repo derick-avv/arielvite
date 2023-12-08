@@ -269,17 +269,10 @@ body {
 /**====================/// RIGHT SECTION \\\====================**/
 
 /**==================== CONTENT SECTION ====================**/
-.content {
-  flex-direction: column;
-  overflow: scroll;
-  height: 100vh;
-  display: flex;
-}
 
 .section {
   height: 100vh;
   width: 100vw;
-  scroll-snap-align: start;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,7 +290,6 @@ body {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   text-transform: uppercase;
-  filter: drop-shadow(var(--hero-shadow));
   transition: all .4s ease;
   animation: fade-down .75s forwards;
 }
@@ -308,11 +300,7 @@ body {
   text-shadow: 0 0 4rem var(--color-secondary);  
   animation: fade-down .75s forwards;
   transition: all .4s ease;
-}
-
-.hero:hover {
-  filter: none;
-  transform: scale(.98);
+  text-align: center;
 }
 
 .hero h1 {
@@ -328,10 +316,6 @@ body {
   transform: translateX(-50%);
   color: var(--color-primary);
   transition: all .4s ease;
-}
-
-.arrow-down i {
-  cursor: pointer;
 }
 
 .cards {

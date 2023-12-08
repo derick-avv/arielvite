@@ -17,9 +17,6 @@ function Home() {
 
   return (
     <>
-      <div className="arrow-down">
-        <i className="fa-solid fa-chevron-down"></i>
-      </div>
       <div className="section" data-num="1">
         <div className="hero">
           <h1>ARIEL VITE</h1>
