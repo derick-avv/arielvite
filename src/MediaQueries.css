@@ -120,10 +120,6 @@
     font-size: 1.5rem;
   }
 
-  .flipCard {
-    width: 25rem;
-    height: 35rem;
-  }
 
   .flipCardFront,
   .flipCardBack {
@@ -183,7 +179,15 @@
     text-wrap: wrap;
     padding: 2rem;
   }
-  .arrow-down {
-    bottom: 10rem;
+  .sub {
+    text-align: center;
   }
+  .flipCard {
+    width: 25rem;
+    height: 35rem;
+  }
+  .arrow-down{
+    bottom: 11rem;
+  }
+
 }
