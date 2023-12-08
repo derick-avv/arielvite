@@ -16,7 +16,7 @@ function Home() {
   // };
 
   return (
-    <div className="content">
+    <>
       <div className="arrow-down">
         <i className="fa-solid fa-chevron-down"></i>
       </div>
@@ -152,7 +152,7 @@ function Home() {
       <div className="section" data-num="5">
         subscribe & footer
       </div>
-    </div>
+    </>
   );
 }
 
