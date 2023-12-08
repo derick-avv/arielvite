@@ -177,10 +177,13 @@
 
 @media (max-width: 375px) {
   :root {
-    font-size: 7px;
+    font-size: 8px;
   }
   .hero {
     text-wrap: wrap;
     padding: 2rem;
+  }
+  .arrow-down {
+    bottom: 10rem;
   }
 }
