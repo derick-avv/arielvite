@@ -177,7 +177,7 @@
 
 @media (max-width: 375px) {
   :root {
-    font-size: 6px;
+    font-size: 7px;
   }
   .hero {
     text-wrap: wrap;
