@@ -309,6 +309,7 @@ body {
   color: var(--color-primary); 
   animation: fade-down .75s forwards;
   text-shadow: 0 0 4rem var(--color-secondary);
+  transition: all .4s ease;
 }
 
 .hero:hover {
@@ -333,15 +334,6 @@ body {
 
 .arrow-down i {
   cursor: pointer;
-}
-
-.pageTitle {
-  color: var(--color-primary);
-  font-size: 3rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-shadow: 0 0 15px #0000005a;
-  margin-bottom: 2rem;
 }
 
 .cards {
