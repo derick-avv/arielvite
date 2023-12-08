@@ -2,19 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Home() {
-  // let count = 1;
-
-  // const handleArrowClick = () => {
-  //   if (count === 5) count = 0;
-  //   count += 1;
-  //   const nextSection = document.querySelector(`[data-num='${count}']`);
-  //   nextSection.scrollIntoView({
-  //     behavior: 'smooth',
-  //     block: 'end',
-  //     inline: 'nearest',
-  //   });
-  // };
-
   return (
     <>
       <div className="section" data-num="1">

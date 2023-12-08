@@ -14,6 +14,7 @@ import AsideRight from './pages/components/AsideRight';
 function App() {
   return (
     <div className="wrapper">
+      <div className="bg"></div>
       <BrowserRouter>
         <Header />
         <AsideLeft />
