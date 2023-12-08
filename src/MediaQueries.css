@@ -108,7 +108,7 @@
 
 @media (max-width: 690px) {
   :root {
-    font-size: 11px;
+    font-size: 10px;
   }
   .pageTitle {
     margin-top: -7rem;
