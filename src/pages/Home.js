@@ -1,12 +1,5 @@
 import React from 'react';
-import { ReactComponent as ReactSvg } from '../img/react.svg';
-import { ReactComponent as JsSvg } from '../img/js.svg';
-import { ReactComponent as HtmlSvg } from '../img/html.svg';
-import { ReactComponent as CssSvg } from '../img/css.svg';
-import { ReactComponent as PhpSvg } from '../img/php.svg';
-import { ReactComponent as MySqlSvg } from '../img/mysql.svg';
-import { ReactComponent as NodejsSvg } from '../img/nodejs.svg';
-import { ReactComponent as MongodbSvg } from '../img/mongodb.svg';
+import { NavLink } from 'react-router-dom';
 
 function Home() {
   let count = 1;
@@ -35,107 +28,122 @@ function Home() {
           <div className="hero">
             <h1>ARIEL VITE</h1>
           </div>
+          <div className="sub">
+            Web Development, Real Estate, Sales & Marketing
+          </div>
         </div>
         <div className="section" data-num="2">
           <h1 className="pageTitle">Expertise</h1>
-          <p className="pageDescription">
-            I have dedicated a full year in mastering these skills and continue
-            to do so on the daily.
-          </p>
           <div className="cards">
             <div className="flipCard">
               <div className="flipCardInner">
                 <div className="flipCardFront">
-                  <HtmlSvg className="cardImage html" />
+                  <div className="cardImage">
+                    <i className="fa-solid fa-briefcase-medical"></i>
+                  </div>
                 </div>
                 <div className="flipCardBack">
-                  <HtmlSvg className="cardImage html" />
-                  <h3>HTML 5</h3>
-                  <h1>HTML Structuring</h1>
+                  <div className="cardImage ">
+                    <i className="fa-solid fa-briefcase-medical"></i>
+                  </div>
+                  <div className="cardTitle">
+                    <h3>Life and Health Insurance Sales</h3>
+                  </div>
+                  <div className="cardInfo1">
+                    <p>Life, Accident and Health Pre-Licensing</p>
+                    <div className="status">
+                      <span className="statusDotPen"></span>
+                      <p className="statusNamePen">Pending</p>
+                    </div>
+                  </div>
+                  <div className="cardInfo2">
+                    <p>Life and Health Insurance License</p>
+                    <div className="status">
+                      <span className="statusDotPen"></span>
+                      <p className="statusNamePen">Pending</p>
+                    </div>
+                  </div>
+                  <div className="cardInfo3">
+                    <p>Social Security Certification</p>
+                    <div className="status">
+                      <span className="statusDotPen"></span>
+                      <p className="statusNamePen">Pending</p>
+                    </div>
+                  </div>
+
+                  <NavLink className="cardInfo4" to="/blog">
+                    <div>
+                      Keep up with my journey through Bankers Life & Casualty
+                      Co.
+                    </div>
+                    <div className="arrowToBlog">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </NavLink>
                 </div>
               </div>
             </div>
             <div className="flipCard">
               <div className="flipCardInner">
                 <div className="flipCardFront">
-                  <CssSvg className="cardImage css" />
+                  <div className="cardImage">
+                    <i class="fa-solid fa-house-chimney"></i>
+                  </div>
                 </div>
                 <div className="flipCardBack">
-                  <CssSvg className="cardImage css" />
-                  <h3>CSS 3</h3>
-                  <h1>Responsive Styling</h1>
+                  <div className="cardImage ">
+                    <i class="fa-solid fa-house-chimney"></i>
+                  </div>
+                  <div className="cardTitle">
+                    <h3>Real Estate Wholesaling & Flipping</h3>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="flipCard">
               <div className="flipCardInner">
                 <div className="flipCardFront">
-                  <JsSvg className="cardImage js" />
+                  <div className="cardImage">
+                    <i class="fa-solid fa-file-code"></i>
+                  </div>
                 </div>
                 <div className="flipCardBack">
-                  <JsSvg className="cardImage js" />
-                  <h3>JavaScript</h3>
-                  <h1>Creating Functionality</h1>
-                </div>
-              </div>
-            </div>
-            <div className="flipCard">
-              <div className="flipCardInner">
-                <div className="flipCardFront">
-                  <ReactSvg className="cardImage react" />
-                </div>
-                <div className="flipCardBack">
-                  <ReactSvg className="cardImage react" />
-                  <h3>React JS</h3>
-                  <h1>Advanced React Development</h1>
-                </div>
-              </div>
-            </div>
-            <div className="flipCard">
-              <div className="flipCardInner">
-                <div className="flipCardFront">
-                  <PhpSvg className="cardImage php" />
-                </div>
-                <div className="flipCardBack">
-                  <PhpSvg className="cardImage php" />
-                  <h3>PHP 8</h3>
-                  <h1>Server Side Developement</h1>
-                </div>
-              </div>
-            </div>
-            <div className="flipCard">
-              <div className="flipCardInner">
-                <div className="flipCardFront">
-                  <NodejsSvg className="cardImage node" />
-                </div>
-                <div className="flipCardBack">
-                  <NodejsSvg className="cardImage node" />
-                  <h3>NodeJS</h3>
-                  <h1>NodeJS Server Side Management</h1>
-                </div>
-              </div>
-            </div>
-            <div className="flipCard">
-              <div className="flipCardInner">
-                <div className="flipCardFront">
-                  <MySqlSvg className="cardImage mysql" />
-                </div>
-                <div className="flipCardBack">
-                  <MySqlSvg className="cardImage mysql" />
-                  <h3>MySQL</h3>
-                  <h1>MySQL Database Management</h1>
-                </div>
-              </div>
-            </div>
-            <div className="flipCard">
-              <div className="flipCardInner">
-                <div className="flipCardFront">
-                  <MongodbSvg className="cardImage mongo" />
-                </div>
-                <div className="flipCardBack">
-                  <MongodbSvg className="cardImage mongo" />
-                  <h3>MongoDB</h3>
-                  <h1>MongoDB Database Management</h1>
+                  <div className="cardImage ">
+                    <i class="fa-solid fa-file-code"></i>
+                  </div>
+                  <div className="cardTitle">
+                    <h3>Fullstack Dev & Marketing</h3>
+                  </div>
+                  <div className="cardInfo1">
+                    <p>Javascript Certification</p>
+                    <div className="status">
+                      <span className="statusDotAcq"></span>
+                      <p className="statusNameAcq">Acquired</p>
+                    </div>
+                  </div>
+                  <div className="cardInfo2">
+                    <p>Advanced React Certification</p>
+                    <div className="status">
+                      <span className="statusDotAcq"></span>
+                      <p className="statusNameAcq">Acquired</p>
+                    </div>
+                  </div>
+                  <div className="cardInfo3">
+                    <p>PHP 8 & MySQL Certification</p>
+                    <div className="status">
+                      <span className="statusDotAcq"></span>
+                      <p className="statusNameAcq">Acquired</p>
+                    </div>
+                  </div>
+                  <NavLink className="cardInfo4" to="/blog">
+                    <div>
+                      Take a look at some of my many Frontend and Fullstack
+                      projects.
+                    </div>
+                    <div className="arrowToBlog">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </NavLink>
                 </div>
               </div>
             </div>

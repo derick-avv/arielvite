@@ -34,19 +34,8 @@ function Header() {
           >
             About Me
           </NavLink>
-          <NavLink
-            className="tab-button"
-            to="/projects"
-            onClick={handleNavClick}
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            className="tab-button"
-            to="/artistry"
-            onClick={handleNavClick}
-          >
-            Artistry
+          <NavLink className="tab-button" to="/blog" onClick={handleNavClick}>
+            Blog Posts
           </NavLink>
           <NavLink
             className="tab-button"

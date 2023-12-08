@@ -2,8 +2,7 @@ import './App.css';
 import './MediaQueries.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Artistry from './pages/Artistry';
+import Blog from './pages/Blog';
 import Services from './pages/Services';
 import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
@@ -21,8 +20,7 @@ function App() {
         <AsideRight />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/projects" exact element={<Projects />} />
-          <Route path="/artistry" exact element={<Artistry />} />
+          <Route path="/blog" exact element={<Blog />} />
           <Route path="/services" exact element={<Services />} />
           <Route path="/aboutme" exact element={<AboutMe />} />
           <Route path="/contact" exact element={<Contact />} />
