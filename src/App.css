@@ -307,8 +307,8 @@ body {
 .sub {
   font-size: 2rem;
   color: var(--color-primary); 
+  text-shadow: 0 0 4rem var(--color-secondary);  
   animation: fade-down .75s forwards;
-  text-shadow: 0 0 4rem var(--color-secondary);
   transition: all .4s ease;
 }
 
